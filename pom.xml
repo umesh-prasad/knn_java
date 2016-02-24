@@ -4,7 +4,7 @@
   <groupId>com.flipkart.knn</groupId>
   <artifactId>knn</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>Um-1.0-SNAPSHOT</version>
   <name>knn</name>
   <url>http://maven.apache.org</url>
   <build>
