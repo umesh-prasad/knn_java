@@ -17,7 +17,10 @@ public class Shard {
     public void insert(String id, float[] embedding) {
         ids.add(id);
         embeddings.put(id, embedding);
+        countDataPoints++;
     }
+
+    public int getCountDataPoints() {return countDataPoints;}
 
     public ArrayList<ResultRecord> knn(float[] query, int k) throws InterruptedException {
         int totalWorkload = ids.size();
@@ -150,6 +153,7 @@ public class Shard {
         public int k;
     }
 
+    private int countDataPoints = 0;
     private ArrayList<String> ids = new ArrayList<String>();
     private HashMap<String, float[]> embeddings = new HashMap<String, float[]>();
     private float[][] flatEmbeddings;
